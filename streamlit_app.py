@@ -23,6 +23,7 @@ st.markdown(
     
     Let's begin!
     """
+)
 
 thinking_messages = [
     "Alex is Crunching the numbers…",
