@@ -14,14 +14,15 @@ st.markdown(
 st.markdown(
     """
     ---
-    Welcome to the Interview Game! Compete against Alex in a mock interview for investment banking.
+    Welcome to the Interview Game! This is a competitive interview experience where you go head to head with Alex to answer
+    investment banking interview questions under simulated high-stakes conditions. See how you stack up and learn as you go.
     
-    - 💬 Answer questions like in a real interview.
-    - 📈 Track your progress and get better with each round.
+    - 💬 Answer each question as you would in a real interview.
+    - 🏆 A winner will be decided for every round. Feedback will be provided.
+    - 📈 Track your progress and improve your responses. Practice makes perfect.
     
     Let's begin!
     """
-)
 
 thinking_messages = [
     "Alex is Crunching the numbers…",
@@ -32,7 +33,7 @@ thinking_messages = [
 # Initialize session state for chat messages, resume, and question tracking
 if "interview_game_messages" not in st.session_state:
     st.session_state.interview_game_messages = [
-        {"role": "assistant", "content": "Welcome! Ready to challenge yourself?"}
+        {"role": "assistant", "content": "Welcome! Ready to challenge yourself and improve your interview skills?"}
     ]
 if "resume" not in st.session_state:
     st.session_state.resume = ""
@@ -78,6 +79,9 @@ def query_interview_game(context, prompt, question_types):
         "asked_questions": list(st.session_state.asked_questions)  # Send list of asked questions to API
     }
 
+    #Debugging output to check the payload before sending
+    st.write("Sending payload:", payload)
+    
     response = requests.post(API_URL_INTERVIEW_GAME, json=payload)
     if response.status_code == 200:
         return response.json().get("text", "Error: No response text")
