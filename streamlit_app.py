@@ -18,13 +18,6 @@ st.markdown(
         color: black; /* Set text color to black */
     }}
     
-    /* Add a semi-transparent background to sidebar content */
-    [data-testid="stSidebar"] > div:first-child {{
-        background-color: rgba(255, 255, 255, 0.1); /* Lighten overlay for black text */
-        padding: 20px;
-        border-radius: 10px;
-    }}
-    
     /* Override text color for all elements in the sidebar to ensure readability */
     [data-testid="stSidebar"] * {{
         color: black !important; /* Make all sidebar text black */
