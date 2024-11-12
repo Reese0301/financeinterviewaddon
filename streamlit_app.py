@@ -12,7 +12,7 @@ st.markdown(
     <style>
     /* Set the sidebar background image */
     [data-testid="stSidebar"] {{
-        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyorkbridge.jpg?raw=true");
+        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyork4.jpg?raw=true");
         background-size: cover;
         background-position: center;
         color: black; /* Set text color to black */
@@ -20,7 +20,7 @@ st.markdown(
     
     /* Add a semi-transparent background to sidebar content */
     [data-testid="stSidebar"] > div:first-child {{
-        background-color: rgba(255, 255, 255, 0.8); /* Lighten overlay for black text */
+        background-color: rgba(255, 255, 255, 0.1); /* Lighten overlay for black text */
         padding: 20px;
         border-radius: 10px;
     }}
