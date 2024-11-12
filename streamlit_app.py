@@ -4,7 +4,7 @@ import random
 
 API_URL_INTERVIEW_GAME = "https://flowise-9kx9.onrender.com/api/v1/prediction/cbf21cc5-8823-46a5-af90-66fca1c9ee32"
 
-home_title = "Interview Game"
+home_title = "🏆 Interview Game"
 
 # Custom CSS for sidebar background image, semi-transparent overlay, and black text color
 st.markdown(
@@ -36,10 +36,10 @@ st.markdown(
     """
     ---
     Welcome to the Interview Game! This is a competitive interview experience where you go head to head with Alex to answer
-    investment banking interview questions under simulated high-stakes conditions. See how you stack up and learn as you go.
+    **investment banking** interview questions under simulated high-stakes conditions. See how you stack up and learn as you go.
     
     - 💬 Answer each question as you would in a real interview.
-    - 🏆 A winner will be decided for every round. Feedback will be provided.
+    - 🥇 A winner will be decided for every round. Feedback will be provided.
     - 📈 Track your progress and improve your responses. Practice makes perfect.
     
     Let's begin!
