@@ -64,7 +64,7 @@ if "asked_questions" not in st.session_state:
 
 # Sidebar for customization
 with st.sidebar:
-    st.header("Customize Interview Questions")
+    st.header("📋Customize Interview Questions")
     question_types = {
         "Behavioral": st.checkbox("Behavioral", value=True),
         "Technical": st.checkbox("Technical", value=True),
