@@ -6,15 +6,28 @@ API_URL_INTERVIEW_GAME = "https://flowise-9kx9.onrender.com/api/v1/prediction/cb
 
 home_title = "Interview Game"
 
-# Custom CSS for sidebar background image
+# Custom CSS for sidebar background image, semi-transparent overlay, and black text color
 st.markdown(
     f"""
     <style>
+    /* Set the sidebar background image */
     [data-testid="stSidebar"] {{
-        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyork4.jpg?raw=true");
+        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyorkbridge.jpg?raw=true");
         background-size: cover;
         background-position: center;
-        color: white;  /* Adjust text color if needed for readability */
+        color: black; /* Set text color to black */
+    }}
+    
+    /* Add a semi-transparent background to sidebar content */
+    [data-testid="stSidebar"] > div:first-child {{
+        background-color: rgba(255, 255, 255, 0.8); /* Lighten overlay for black text */
+        padding: 20px;
+        border-radius: 10px;
+    }}
+    
+    /* Override text color for all elements in the sidebar to ensure readability */
+    [data-testid="stSidebar"] * {{
+        color: black !important; /* Make all sidebar text black */
     }}
     </style>
     """,
