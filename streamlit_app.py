@@ -6,6 +6,21 @@ API_URL_INTERVIEW_GAME = "https://flowise-9kx9.onrender.com/api/v1/prediction/cb
 
 home_title = "Interview Game"
 
+# Custom CSS for sidebar background image
+st.markdown(
+    f"""
+    <style>
+    [data-testid="stSidebar"] {{
+        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyorkbridge.jpg?raw=true");
+        background-size: cover;
+        background-position: center;
+        color: white;  /* Adjust text color if needed for readability */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown(
     f"""<h1 style='display: inline;'>{home_title} <span style='color:#2E9BF5; font-size: 0.6em;'>Beta</span></h1>""",
     unsafe_allow_html=True
@@ -123,4 +138,4 @@ if prompt := st.chat_input("Answer here..."):
 
     # Save Alex's response and track it to avoid repetition
     st.session_state.interview_game_messages.append({"role": "assistant", "content": response_content})
-    st.session_state.asked_questions.add(response_content)  # Add to asked questions set to avoid repeats
+    st.session_state.asked_questions.add(response_content)  # Add to asked questions set to avoid repeats                                              
