@@ -80,8 +80,8 @@ def query_interview_game(context, prompt, question_types):
         "asked_questions": list(st.session_state.asked_questions)  # Send list of asked questions to API
     }
 
-    #Debugging output to check the payload before sending
-    #st.write("Sending payload:", payload)
+    # Debugging output to check the payload before sending
+    # st.write("Sending payload:", payload)
     
     response = requests.post(API_URL_INTERVIEW_GAME, json=payload)
     if response.status_code == 200:
