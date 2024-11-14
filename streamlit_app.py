@@ -6,21 +6,22 @@ API_URL_INTERVIEW_GAME = "https://flowise-9kx9.onrender.com/api/v1/prediction/cb
 
 home_title = "🏆 Interview Game"
 
-# Custom CSS for sidebar background image, semi-transparent overlay, and black text color
+# Custom CSS for sidebar background image, darker overlay, and white text color
 st.markdown(
     f"""
     <style>
-    /* Set the sidebar background image */
+    /* Set the sidebar background image with a darker overlay */
     [data-testid="stSidebar"] {{
-        background-image: url("https://github.com/Reese0301/chatbot/blob/main/newyork4.jpg?raw=true");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                          url("https://github.com/Reese0301/chatbot/blob/main/newyork4.jpg?raw=true");
         background-size: cover;
         background-position: center;
-        color: black; /* Set text color to black */
+        color: white; /* Set text color to white */
     }}
     
     /* Override text color for all elements in the sidebar to ensure readability */
     [data-testid="stSidebar"] * {{
-        color: black !important; /* Make all sidebar text black */
+        color: white !important; /* Make all sidebar text white */
     }}
     </style>
     """,
@@ -101,9 +102,6 @@ def query_interview_game(context, prompt, question_types):
         "asked_questions": list(st.session_state.asked_questions)  # Send list of asked questions to API
     }
 
-    # Debugging output to check the payload before sending
-    # st.write("Sending payload:", payload)
-    
     response = requests.post(API_URL_INTERVIEW_GAME, json=payload)
     if response.status_code == 200:
         return response.json().get("text", "Error: No response text")
@@ -144,4 +142,4 @@ if prompt := st.chat_input("Answer here..."):
 
     # Save Alex's response and track it to avoid repetition
     st.session_state.interview_game_messages.append({"role": "assistant", "content": response_content})
-    st.session_state.asked_questions.add(response_content)  # Add to asked questions set to avoid repeats                                              
+    st.session_state.asked_questions.add(response_content)  # Add to asked questions set to avoid repeats
