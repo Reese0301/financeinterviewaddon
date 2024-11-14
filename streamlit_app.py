@@ -12,7 +12,7 @@ st.markdown(
     <style>
     /* Set the sidebar background image with a darker overlay */
     [data-testid="stSidebar"] {{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
                           url("https://github.com/Reese0301/chatbot/blob/main/newyork4.jpg?raw=true");
         background-size: cover;
         background-position: center;
