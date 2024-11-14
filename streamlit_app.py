@@ -75,7 +75,7 @@ with st.sidebar:
 
     if question_types["Resume"]:
         resume_text = st.text_area("Paste your resume here.")
-        if st.button("📄 Send Resume"):
+        if st.button("↩️"):
             if resume_text.strip():
                 st.session_state.resume = resume_text
                 st.success("Resume sent successfully!")
